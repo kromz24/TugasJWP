@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Gizi Harian 🥦</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Nutrition Tracker</h1>
+    </header>
+    <main class="container">
+        <section id="user-input">
+            <h2>Data Pengguna 🧑‍💻</h2>
+            <form id="profile-form">
+                <label for="berat">Berat (kg):</label>
+                <input type="number" id="berat" required>
+
+                <label for="tinggi">Tinggi (cm):</label>
+                <input type="number" id="tinggi" required>
+                
+                <label for="usia">Usia:</label>
+                <input type="number" id="usia" required>
+
+                <label for="aktivitas">Tingkat Aktivitas:</label>
+                <select id="aktivitas" required>
+                    <option value="sedentary">Jarang Bergerak</option>
+                    <option value="light">Ringan (1-3x/minggu)</option>
+                    <option value="moderate">Sedang (3-5x/minggu)</option>
+                    <option value="active">Aktif (6-7x/minggu)</option>
+                </select>
+
+                <button type="submit">Hitung Kebutuhan</button>
+            </form>
+        </section>
+
+        <section id="food-input" class="hidden">
+            <h2>Input Makanan Hari Ini 🍽️</h2>
+            <form id="meal-form">
+                <label for="kalori">Jumlah Kalori Makanan:</label>
+                <input type="number" id="kalori" required>
+                
+                <label for="protein">Protein (g):</label>
+                <input type="number" id="protein" required>
+
+                <button type="submit">Tambahkan Makanan</button>
+            </form>
+        </section>
+
+        <section id="results" class="hidden">
+            <h2>Hasil & Feedback ✨</h2>
+            <p>BMI Anda: <span id="bmi-val"></span> - <strong id="bmi-status"></strong></p>
+            <p>Kebutuhan Kalori Harian (TDEE): <span id="tdee-val"></span> Kcal</p>
+            
+            <h3>Progres Gizi Hari Ini:</h3>
+            <div class="progress-bar-container">
+                <div id="calorie-progress" class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <p>Total Kalori Dikonsumsi: <span id="consumed-calories">0</span> Kcal</p>
+
+            <div id="feedback-message"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
