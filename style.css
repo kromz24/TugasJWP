@@ -1,0 +1,133 @@
+/* Font impor yang terasa 'fantasi' atau 'RPG' */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e; /* Biru gelap/ungu malam */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/800?blur=5'); /* Efek background gelap */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2c2c54; /* Kotak konten ungu gelap */
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00; /* Border emas */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Glow emas */
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.fantasy-header h1 {
+    font-family: 'Cinzel', serif; /* Font judul heroik */
+    color: #ffcc00;
+    text-shadow: 1px 1px 3px #8b0000;
+    margin-bottom: 5px;
+}
+
+.fantasy-header p {
+    color: #a0a0a0;
+    font-style: italic;
+}
+
+/* --- FORM --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1.1em;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3e3e70; /* Input background gelap */
+    color: white;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="number"]:focus {
+    border-color: #ff4500; /* Jingga saat fokus */
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.8);
+    outline: none;
+}
+
+.generate-button {
+    background-color: #e74c3c; /* Merah menyala */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #c0392b; /* Efek 3D */
+    transition: all 0.2s;
+}
+
+.generate-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+    box-shadow: 0 5px #a02012;
+}
+
+/* --- RESULT BOX --- */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1a1a2e; 
+    border: 2px dashed #ffcc00;
+}
+
+.result-box h2 {
+    color: #e0e0e0;
+}
+
+.element-type {
+    font-size: 1.6em;
+    font-weight: 700;
+    padding: 5px 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
+
+/* **Percabangan di CSS** untuk tampilan elemen */
+.Fire {
+    color: #FF4500; /* Jingga/Api */
+    text-shadow: 0 0 5px rgba(255, 69, 0, 0.8);
+}
+
+.Water {
+    color: #3498db; /* Biru/Air */
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+}
+
+.Wind {
+    color: #2ecc71; /* Hijau/Angin */
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.8);
+}
+
+.Earth {
+    color: #9b59b6; /* Ungu/Bumi/Batu */
+    text-shadow: 0 0 5px rgba(155, 89, 182, 0.8);
+}
